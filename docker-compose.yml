@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  # app:
+  #   build: .
+  #   ports:
+  #     - "3000:3000"
+  #   volumes:
+  #     - .:/app
+  #     - /app/node_modules
+  #   environment:
+  #     - NODE_ENV=development
+  mongo:
+    container_name: mongo
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    expose:
+      - "27017"
+    command: ["mongod", "--replSet", "rs1"]
+    volumes:
+      - ~/.mongo:/data/db

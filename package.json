@@ -1,0 +1,29 @@
+{
+  "name": "hapi-bun-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "bun run server.ts",
+    "test": "bun test",
+    "coverage": "bun test --coverage && genhtml coverage/lcov.info --output-directory coverage/html && open coverage/html/index.html"
+  },
+  "author": "D. Midnight <53611782+dmidnight@users.noreply.github.com>",
+  "license": "MIT",
+  "description": "Hapi API server with Bun.js",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@hapi/cookie": "^12.0.1",
+    "@hapi/hapi": "^21.4.0",
+    "@hapi/inert": "^7.1.0",
+    "@hapi/vision": "^7.0.3",
+    "hapi-swagger": "^17.3.2",
+    "joi": "^17.13.3",
+    "mongoose": "^8.15.1"
+  }
+}
